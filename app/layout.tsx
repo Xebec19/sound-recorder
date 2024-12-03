@@ -17,12 +17,13 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "Online Sound Recorder - Record & Download Audio",
   description:
-    "Record high-quality audio directly in your browser and download your recordings instantly. No installation required!",
+    "Easily record high-quality audio directly from your browser without the need for any installations or additional software. Our platform offers a seamless and efficient way to capture clear, professional-grade sound with just a few clicks. Whether you're recording a podcast, voiceover, music, or any other audio project, you can trust our tool to deliver superior audio quality every time. After recording, you can instantly download your files, making it ideal for quick projects and fast workflows. Enjoy the simplicity and convenience of a browser-based recording solution, designed to meet all your audio recording needs.",
   keywords:
     "sound recorder, online audio recorder, download recordings, free sound recorder",
   openGraph: {
     title: "Online Sound Recorder",
-    description: "Easily record and download audio directly from your browser.",
+    description:
+      "Record high-quality audio directly in your browser and download instantly, with no installation required. Ideal for quick projects and professional-grade sound.",
     images: { url: "/img/og-image.webp" },
     url: "https://sound-recorder.rohankumarthakur.co.in/",
   },
