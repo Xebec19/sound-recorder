@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Online Sound Recorder",
     description: "Easily record and download audio directly from your browser.",
-    images: [{ url: "/img/og-image.webp" }],
+    images: { url: "/img/og-image.webp" },
     url: "https://sound-recorder.rohankumarthakur.co.in/",
   },
   twitter: {
