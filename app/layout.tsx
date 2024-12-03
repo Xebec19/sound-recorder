@@ -1,3 +1,4 @@
+import Clarity from "@microsoft/clarity";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
@@ -24,6 +25,10 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const projectId = "p8ashgggi2";
+
+  Clarity.init(projectId);
+
   return (
     <html lang="en">
       <Head>
@@ -57,19 +62,30 @@ export default function RootLayout({
           }}
         />
 
-        <Head>
-          <meta property="og:title" content="Online Sound Recorder" />
-          <meta
-            property="og:description"
-            content="Easily record and download audio directly from your browser."
-          />
-          <meta property="og:image" content="/img/og-image.webp" />
-          <meta
-            property="og:url"
-            content="https://sound-recorder.rohankumarthakur.co.in/"
-          />
-          <meta name="twitter:card" content="summary_large_image" />
-        </Head>
+        <meta property="og:title" content="Online Sound Recorder" />
+        <meta
+          property="og:description"
+          content="Easily record and download audio directly from your browser."
+        />
+        <meta property="og:image" content="/img/og-image.webp" />
+        <meta
+          property="og:url"
+          content="https://sound-recorder.rohankumarthakur.co.in/"
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+
+        <script
+          type="text/javascript"
+          dangerouslySetInnerHTML={{
+            __html: `
+                (function(c,l,a,r,i,t,y){
+                    c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+                    t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+                    y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+                })(window, document, "clarity", "script", "p8ashgggi2");
+              `,
+          }}
+        />
       </Head>
 
       <body
