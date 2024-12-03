@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Head from "next/head";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -25,6 +26,52 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Head>
+        <title>Online Sound Recorder - Record & Download Audio</title>
+        <meta
+          name="description"
+          content="Record high-quality audio directly in your browser and download your recordings instantly. No installation required!"
+        />
+        <meta
+          name="keywords"
+          content="sound recorder, online audio recorder, download recordings, free sound recorder"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebApplication",
+              name: "Online Sound Recorder",
+              description:
+                "Record and download audio directly from your browser.",
+              applicationCategory: "MultimediaApplication",
+              operatingSystem: "All",
+              browserRequirements: "Requires JavaScript",
+              url: "https://sound-recorder.rohankumarthakur.co.in/",
+              creator: {
+                "@type": "Person",
+                name: "Rohan Kumar Thakur",
+              },
+            }),
+          }}
+        />
+
+        <Head>
+          <meta property="og:title" content="Online Sound Recorder" />
+          <meta
+            property="og:description"
+            content="Easily record and download audio directly from your browser."
+          />
+          <meta property="og:image" content="/img/og-image.webp" />
+          <meta
+            property="og:url"
+            content="https://sound-recorder.rohankumarthakur.co.in/"
+          />
+          <meta name="twitter:card" content="summary_large_image" />
+        </Head>
+      </Head>
+
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
